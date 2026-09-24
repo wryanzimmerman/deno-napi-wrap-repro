@@ -6,8 +6,7 @@ static void finalize(napi_env env, void *data, void *hint) { finalized++; }
 
 static napi_value make_wrapped(napi_env env, napi_callback_info info) {
   napi_value obj;
-  napi_create_object(env, &obj);
-  napi_wrap(env, obj, NULL, finalize, NULL, NULL);
+  napi_create_external(env, NULL, finalize, NULL, &obj);
   return obj;
 }
 
