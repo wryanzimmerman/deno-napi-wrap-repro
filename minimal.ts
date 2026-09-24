@@ -38,4 +38,4 @@ for (const [objects, total] of Object.entries(timings)) {
   totalTime += total
   console.log(`n=${objects} ${(total / limit).toFixed(1)} ms`)
 }
-console.log(`Total time ${totalTime.toFixed(1)} ms`)
+console.log(`Total time ${totalTime.toFixed(1)} ms\n`)
